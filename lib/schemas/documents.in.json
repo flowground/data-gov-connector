@@ -1,0 +1,182 @@
+{
+    "type": "object",
+    "properties": {
+        "response_format": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "json",
+                "xml"
+            ],
+            "default": "json"
+        },
+        "countsOnly": {
+            "required": false,
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "encoded": {
+            "required": false,
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "s": {
+            "required": false,
+            "type": "string"
+        },
+        "dct": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "N",
+                "PR",
+                "FR",
+                "O",
+                "SR",
+                "PS"
+            ]
+        },
+        "dktid": {
+            "required": false,
+            "type": "string"
+        },
+        "dkt": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "N",
+                "R"
+            ]
+        },
+        "cp": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "O",
+                "C"
+            ]
+        },
+        "a": {
+            "required": false,
+            "type": "string"
+        },
+        "rpp": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "10",
+                "25",
+                "100",
+                "500",
+                "1000"
+            ]
+        },
+        "po": {
+            "required": false,
+            "type": "integer"
+        },
+        "cs": {
+            "required": false,
+            "type": "integer",
+            "enum": [
+                0,
+                3,
+                15,
+                30,
+                90
+            ]
+        },
+        "np": {
+            "required": false,
+            "type": "integer",
+            "enum": [
+                0,
+                3,
+                15,
+                30,
+                90
+            ]
+        },
+        "cmsd": {
+            "required": false,
+            "type": "string",
+            "format": "date"
+        },
+        "cmd": {
+            "required": false,
+            "type": "string",
+            "format": "date"
+        },
+        "crd": {
+            "required": false,
+            "type": "string",
+            "format": "date"
+        },
+        "rd": {
+            "required": false,
+            "type": "string",
+            "format": "date"
+        },
+        "pd": {
+            "required": false,
+            "type": "string",
+            "format": "date"
+        },
+        "cat": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "AD",
+                "AEP",
+                "BFS",
+                "CT",
+                "LES",
+                "EELS",
+                "EUMM",
+                "HCFP",
+                "PRE",
+                "ITT"
+            ]
+        },
+        "sb": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "docketId",
+                "docId",
+                "title",
+                "postedDate",
+                "agency",
+                "documentType",
+                "submitterName",
+                "organization"
+            ]
+        },
+        "so": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "ASC",
+                "DESC"
+            ]
+        },
+        "dktst": {
+            "required": false,
+            "type": "string"
+        },
+        "dktst2": {
+            "required": false,
+            "type": "string"
+        },
+        "docst": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

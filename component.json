@@ -1,0 +1,88 @@
+{
+    "title": "Regulations.gov",
+    "description": "Provides public users access to federal regulatory content.",
+    "docsUrl": "http://regulationsgov.github.io/developers/",
+    "url": "https://api.apis.guru/v2/specs/data.gov/3.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.data.gov/regulations/v3",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "api_key": {
+                "label": "api_key (api_key)",
+                "viewClass": "TextFieldView",
+                "note": "API Key"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "docket": {
+            "main": "./lib/actions/docket.js",
+            "title": "Returns Docket information",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/docket.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "document": {
+            "main": "./lib/actions/document.js",
+            "title": "Returns Document information",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/document.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "documents": {
+            "main": "./lib/actions/documents.js",
+            "title": "Search for Documents",
+            "description": "This API allows users to build a query based on any of the parameters below.  If you have trouble building queries, you may wish to try them through the <a href=\"http://www.regulations.gov/#!advancedSearch\">Advanced Search</a> page on the Regulations.gov website.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/documents.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

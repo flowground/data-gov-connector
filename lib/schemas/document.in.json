@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "response_format": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "json",
+                "xml"
+            ],
+            "default": "json"
+        },
+        "documentId": {
+            "required": false,
+            "type": "string",
+            "default": "EPA-HQ-OAR-2011-0028-0108"
+        },
+        "federalRegisterNumber": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

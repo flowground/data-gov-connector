@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "response_format": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "json",
+                "xml"
+            ],
+            "default": "json"
+        },
+        "docketId": {
+            "required": true,
+            "type": "string",
+            "default": "EPA-HQ-OAR-2011-0028"
+        }
+    }
+}
